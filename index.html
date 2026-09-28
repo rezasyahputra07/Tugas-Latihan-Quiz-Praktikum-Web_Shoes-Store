@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shoes Store</title>
+    <style>
+        body{
+            margin:0;
+            font-family: Arial, sans-serif;
+            background-color: #EEEEEE;
+        }
+        
+        .navbar{
+            justify-content: space-between;
+            align-items: center;
+            display: flex;
+            background-color: #ffffff ;
+            padding-right: 80px;
+            padding-left: 80px;
+        }
+        .judul h1 {
+            font-size: 22px;
+            color: #000000;
+        }
+
+        .menu{
+            display: flex;
+            gap: 17px;
+        }
+
+        .menu a {
+            text-decoration: none;
+            color: #000000;
+        }
+
+        .menu a:hover {
+            color: #00000088;
+        }
+
+        .container{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 90px;
+        }
+
+        .card{
+            display: flex;
+            background-color: #FFFFFF;
+            border-radius: 20px;
+            padding: 18px;
+            width: 100%;
+            max-width: 620px;
+            gap: 20px;
+        }
+
+        .gambar{
+            background-color: #DDDDDD;
+            border-radius: 15px;
+        }
+        .gambar img {
+            border-radius: 15px;
+            width: 300px;
+            height: 320px;
+            object-fit: cover;
+        }
+
+        .isi {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .kategori {
+            color: #777777; 
+            font-size: 12px;
+            font-weight: bold;
+            margin-bottom: 1px;
+            letter-spacing: 1px;
+        }
+
+        .nama-produk {
+            font-size: 30px;
+            font-weight: bold;
+            color: #000000; 
+            margin-bottom: 5px;
+        }
+
+        .deskripsi {
+            color: #666666; 
+            font-size: 12px;
+            line-height: 1.5;
+            margin-bottom: 20px;
+        }
+
+        .harga {
+            font-size: 17px;
+            font-weight: bold;
+            color: #000000;
+            margin-bottom: 1px;
+        }
+
+        .pilihan-warna {
+            margin-bottom: 25px;
+        }
+
+        .pilihan-warna p {
+            font-size: 13px;
+            font-weight: 500;
+            color: #000000;
+            margin-bottom: 2px;
+        }
+
+        .color-buttons {
+            display: flex;
+            gap: 12px;
+        }
+
+        .btn-color {
+            width: 22px;
+            height: 22px;
+            border-radius: 50%;
+            border: 2px solid #ffffff;
+            cursor: pointer;
+            outline: 1px solid #ccc;
+        }
+
+        .btn-color:hover {
+            transform: scale(1.15);
+        }
+        
+        .btn-black {
+            background-color: #000000;
+        }
+
+        .btn-blue {
+            background-color: #3B82F6;
+        }
+
+        .btn-cream {
+            background-color: #F5E6CC;
+        }
+
+        .btn-add {
+            background-color: #000000; 
+            color: #ffffff;
+            padding: 12px 20px;
+            border: none;
+            font-size: 14px;
+            font-weight: bold;
+            border-radius: 8px;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        .btn-add:hover {
+            background-color: #444444; 
+        }
+
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <div class="judul">
+            <h1>SHOES.</h1>
+        </div>
+        <div class="menu">
+            <a href="">Home</a>
+            <a href="">Products</a>
+            <a href="">About</a>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="card" id="warnaCard">
+            <div class="gambar">
+                <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Air Runner Shoes">
+            </div>
+            <div class="isi">
+                <p class="kategori">RUNNING SHOES</p>
+                <h2 class="nama-produk">Air Runner</h2>
+                <p class="deskripsi">Sepatu ringan dan nyaman untuk digunakan saat berolahraga maupun aktivitas sehari hari. </p>
+                <p class="harga">Rp 899.000</p>
+
+                <div class="pilihan-warna">
+                    <p>Pilih warna:</p>
+                    <div class="color-buttons">
+                        <button class="btn-color btn-black" onclick="ubahWarna('#DDDDDD')" title="Black"></button>
+                        <button class="btn-color btn-blue" onclick="ubahWarna('#CFE2FF')" title="Blue"></button>
+                        <button class="btn-color btn-cream" onclick="ubahWarna('#F5E6CC')" title="Cream"></button>
+                    </div>
+                </div>
+                <button class="btn-add">Add To Card</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function ubahWarna(KodeWarna){
+            var card = document.getElementById("warnaCard");
+            card.style.backgroundColor = KodeWarna;
+        }
+
+    </script>
+    </body>
+</html>
